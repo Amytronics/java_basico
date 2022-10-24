@@ -1,0 +1,33 @@
+import java . io . *;
+public class Main{
+    public static void main(String args[]) throws IOException {
+        BufferedReader bufEntrada = new BufferedReader(new InputStreamReader
+                (System . in));
+        String r;
+        int incremPuer;
+        incremPuer = 2;
+        Coche miCoche = new Coche(incremPuer);
+        System.out.println("Coche de 2 puertas");
+        do {
+            do {
+                System.out.print("Quiere agregar otra puerta al coche? (s/n): ");
+                r = bufEntrada.readLine();
+                r = r.toLowerCase();
+            } while (!(r.equals("s") || r.equals("n")));
+            if (r.equals("s")) {
+               incremPuer=miCoche.puertas(incremPuer);
+               System.out.println
+                       ("Ahora el coche tiene: "+incremPuer+" puertas");
+            }
+        } while (!r.equals("n"));
+    }
+}
+class Coche {
+        int puertas;
+       Coche (int p) {
+        puertas=p;
+    }
+     int puertas(int incremPuer){
+        return incremPuer+1;
+    }    
+}
