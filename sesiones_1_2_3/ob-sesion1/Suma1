@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Suma1 {
+    public static void main (String[] args) {
+        Scanner teclado = new Scanner (System.in);
+        double valor1, valor2, valor3, resultado;
+
+        System.out.println("Introduce el primer valor");
+        valor1 = teclado.nextDouble();
+        System.out.println("Introduce segundo valor");
+        valor2 = teclado.nextDouble();
+        System.out.println("Introduce tercer valor");
+        valor3 = teclado.nextDouble();
+        resultado = valor1 + valor2 + valor3;
+        System.out.println("El Resultado de la suma es: " + resultado);
+
+    }
+}
